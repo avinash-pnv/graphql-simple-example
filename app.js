@@ -1,11 +1,12 @@
 const express = require('express');
 const graphqlHTTP = require('express-graphql');
+const schema = require('./schema/schema');
 
 const app = express();
 
 //Create a middle ware, and create a endpoint(supercharged end-point)
 app.use('/graphql', graphqlHTTP({
-	
+	schema
 }));
 
 app.listen(4000, () => {
