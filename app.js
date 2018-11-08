@@ -6,7 +6,8 @@ const app = express();
 
 //Create a middle ware, and create a endpoint(supercharged end-point)
 app.use('/graphql', graphqlHTTP({
-	schema
+	schema,
+    graphiql: true
 }));
 
 app.listen(4000, () => {
